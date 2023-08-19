@@ -1,0 +1,3 @@
+ABC_REPO: "/oak/stanford/groups/engreitz/Users/atan5133/ABC-Enhancer-Gene-Prediction"
+E2G_REPO: "/oak/stanford/groups/engreitz/Users/atan5133/encode_e2g_features"
+ABC_biosamples_table: "/oak/stanford/groups/engreitz/Users/atan5133/ABC-Enhancer-Gene-Prediction/config/config-biosamples-chr22.tsv" 
