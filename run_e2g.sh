@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 
-conda activate e2g_pipeline
+echo "Running ABC"
+./scripts/abc.sh 
 
-./abc.sh 
-./e2g_features.sh 
-python run_encode_e2g.py
+echo "Generating E2G Feature Tables"
+./scripts/e2g_features.sh 
+
+# py scripts/run_encode_e2g.py
