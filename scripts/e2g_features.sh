@@ -12,5 +12,4 @@ E2G_FEATURES_CONFIG_NAME="$PWD/config/dataset_config.tsv"
 python scripts/gen_e2g_features_config.py --abc_biosamples_config $BIOSAMPLES_TABLE_FILE --abc_results_dir $ABC_RESULTS_DIR --output_config_name $E2G_FEATURES_CONFIG_NAME
 
 cd $E2G_FEATURES_REPO
-# snakemake --use-conda --profile slurm --config dataset_config=$E2G_FEATURES_CONFIG_NAME --rerun-incomplete
-snakemake --use-conda -j2 --config dataset_config=$E2G_FEATURES_CONFIG_NAME results_dir=$E2G_FEATURES_RESULTS --rerun-incomplete
+snakemake --use-conda --profile slurm --config dataset_config=$E2G_FEATURES_CONFIG_NAME results_dir=$E2G_FEATURES_RESULTS --rerun-incomplete
