@@ -6,5 +6,3 @@ echo "Running ABC"
 
 echo "Generating E2G Feature Tables"
 ./scripts/e2g_features.sh 
-
-# py scripts/run_encode_e2g.py
