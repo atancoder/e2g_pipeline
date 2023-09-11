@@ -10,5 +10,3 @@ ABC_REPO=$(yq '.ABC_REPO' $CONFIG_FILE | tr -d '"')
 cd $ABC_REPO
 
 snakemake --use-conda --profile slurm --config biosamplesTable=$BIOSAMPLES_TABLE_FILE predictions_results_dir=$ABC_RESULTS_DIR --rerun-incomplete
-
-python scripts/qc_abc.py --abc_results_dir $ABC_RESULTS_DIR

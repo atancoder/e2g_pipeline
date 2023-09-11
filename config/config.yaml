@@ -1,6 +1,6 @@
 ABC_REPO: "/oak/stanford/groups/engreitz/Users/atan5133/abc_run_comparisons/ABC-Enhancer-Gene-Prediction"
-ABC_RESULTS: "/oak/stanford/projects/igvf/Y2AVE/E2G_Predictions/outputs/"
+ABC_RESULTS: "/oak/stanford/groups/engreitz/Users/atan5133/outputs"
 ABC_biosamples_table: "/oak/stanford/groups/engreitz/Users/atan5133/igvf_dataset_processing/biosamples_config.tsv"
 
 E2G_FEATURES_REPO: "/oak/stanford/groups/engreitz/Users/atan5133/encode_e2g_features"
-E2G_FEATURES_RESULTS: "/oak/stanford/projects/igvf/Y2AVE/E2G_Predictions/outputs/"
+E2G_FEATURES_RESULTS: "/oak/stanford/groups/engreitz/Users/atan5133/outputs"

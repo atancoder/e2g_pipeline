@@ -4,5 +4,5 @@ set -e
 echo "Running ABC"
 ./scripts/abc.sh 
 
-echo "Generating E2G Feature Tables"
+echo "Running ENCODE-rE2G"
 ./scripts/e2g_features.sh 

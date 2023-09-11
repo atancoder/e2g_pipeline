@@ -1,13 +1,11 @@
 # QC the ABC results
 import glob
-import gzip
 import os
 from typing import List
 
 import click
-import pandas as pd
 
-MIN_LINE_COUNT = 1e6
+MIN_FILE_SIZE_MB = 10
 
 
 def get_prediction_files(abc_results_dir: str) -> List[str]:
@@ -21,13 +19,12 @@ def get_prediction_files(abc_results_dir: str) -> List[str]:
 def qc_line_count(prediction_files):
     failed_qc_files = {}
     for file_path in prediction_files:
-        with gzip.open(file_path, "rt", encoding="utf-8") as file:
-            line_count = sum(1 for line in file)
-            if line_count < MIN_LINE_COUNT:
-                failed_qc_files[file_path] = line_count
+        size_mb = int(os.path.getsize(file_path) / 1e6)
+        if size_mb < MIN_FILE_SIZE_MB:
+            failed_qc_files[file_path] = size_mb
     if failed_qc_files:
         raise Exception(
-            f"{len(failed_qc_files)} files have < {MIN_LINE_COUNT} lines. Files are: {failed_qc_files}"
+            f"{len(failed_qc_files)} files have < {MIN_FILE_SIZE_MB} MB. Files are: {failed_qc_files}"
         )
 
 
